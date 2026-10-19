@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://ead.fcmsantacasasp.edu.br/ava/pluginfile.php/456447/mod_resource/content/0/exer1.1_resolvido.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Calculadora de Porcentagem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="number"] {
+      width: 80px;
+      padding: 10px;
+      font-size: 18px;
+      text-align: center;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    input[type="number"]:focus {
+      border-color: #007bff;
+    }
+
+    .simbolo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .btn-igual {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 16px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-igual:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<script>
+  function porcentagem() {
+    const valor1 = parseFloat(num1.value);
+    const valor2 = parseFloat(num2.value);
+    const resultado = (valor1 * valor2) / 100;
+    res.value = resultado.toFixed(2);
+  }
+
+    function soma() {
+    const valor1 = parseFloat(numSoma1.value);
+    const valor2 = parseFloat(numSoma2.value);
+    const resultado = valor1 + valor2;
+    resSoma.value = resultado.toFixed(2);
+  }
+
+  function subtracao() {
+    const valor1 = parseFloat(numSub1.value);
+    const valor2 = parseFloat(numSub2.value);
+    const resultado = valor1 - valor2;
+    resSub.value = resultado.toFixed(2);
+  }
+
+  function multiplicar() {
+    const valor1 = parseFloat(numMult1.value);
+    const valor2 = parseFloat(numMult2.value);
+    const resultado = valor1 * valor2;
+    resMult.value = resultado.toFixed(2);
+  }
+
+    function dividir() {
+    const valor1 = parseFloat(numDiv1.value);
+    const valor2 = parseFloat(numDiv2.value);
+    const resultado = valor1 / valor2;
+    resDiv.value = resultado.toFixed(2);
+  }
+
+  function potencial() {
+    const valor1 = parseFloat(numPow1.value);
+    const valor2 = parseFloat(numPow2.value);
+    const resultado = valor1 ** valor2;
+    resPow.value = resultado.toFixed(2);
+  }
+
+</script>
+  <div class="container">
+    <input type="number" value="20" id="num1">
+    <span class="simbolo">%</span>
+    <input type="number" value="50" id="num2">
+    <button class="btn-igual" onclick="porcentagem()">=</button>
+    <input type="number" value="0" id="res">
+  </div>
+
+  <div class="container">
+    <input type="number" value="20" id="numSoma1">
+    <span class="simbolo">+</span>
+    <input type="number" value="50" id="numSoma2">
+    <button class="btn-igual" onclick="soma()">=</button>
+    <input type="number" value="0" id="resSoma">
+  </div>
+
+  <div class="container">
+    <input type="number" value="20" id="numSub1">
+    <span class="simbolo">-</span>
+    <input type="number" value="50" id="numSub2">
+    <button class="btn-igual" onclick="subtracao()">=</button>
+    <input type="number" value="0" id="resSub">
+  </div>
+
+  <div class="container">
+    <input type="number" value="20" id="numMult1">
+    <span class="simbolo">x</span>
+    <input type="number" value="50" id="numMult2">
+    <button class="btn-igual" onclick="multiplicar()">=</button>
+    <input type="number" value="0" id="resMult">
+  </div>
+
+  <div class="container">
+    <input type="number" value="20" id="numDiv1">
+    <span class="simbolo">/</span>
+    <input type="number" value="50" id="numDiv2">
+    <button class="btn-igual" onclick="dividir()">=</button>
+    <input type="number" value="0" id="resDiv">
+  </div>
+
+  <div class="container">
+    <input type="number" value="20" id="numPow1">
+    <span class="simbolo">**</span>
+    <input type="number" value="50" id="numPow2">
+    <button class="btn-igual" onclick="potencial()">=</button>
+    <input type="number" value="0" id="resPow">
+  </div>
+
+</script>
+</body></html>
